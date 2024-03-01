@@ -10,11 +10,7 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
-<<<<<<< HEAD
   profile = "sso-dev"
-=======
-  profile = "sso"
->>>>>>> 1c56e0cb85f7a7dac31dbf98a45fe7849f596b7e
 }
 
 
@@ -105,7 +101,6 @@ resource "aws_eip" "firsteip" {
   network_interface = aws_network_interface.foo.id
   associate_with_private_ip = "10.0.1.100"
   depends_on = [ aws_internet_gateway.myfirstgateway ]
-<<<<<<< HEAD
 }
 
 #iam role github actions
@@ -155,6 +150,3 @@ resource "aws_s3_bucket" "staticwebsite" {
 }
 
 #S3 Host Root Domain
-=======
-}
->>>>>>> 1c56e0cb85f7a7dac31dbf98a45fe7849f596b7e
